@@ -29,19 +29,15 @@ const allUsers = [
   }
 ];
 
-const friendName = allUsers.map(allUser => allUser.friends);
-//  console.log(friendName);
 
 
   
-    const getUsersWithFriend = (users, friendName) => 
-        allUsers.filter(allUsers => !allUsers.friends === !friendName);
+const getUsersWithFriend = (users, friendName) => 
+  allUsers.filter(users => users.friends.includes(friendName));
 
+ 
 
-
-
-
-console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
+console.log(getUsersWithFriend(allUsers, "Briana Decker"));
 // [
 //   {
 //     name: "Sharlene Bush",
@@ -66,3 +62,6 @@ console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
 // ]
 
 console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
+
+
+
